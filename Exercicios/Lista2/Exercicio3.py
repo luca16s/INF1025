@@ -1,14 +1,12 @@
 import math
-from funcBase.funcBase import areaTriangulo
-from funcBase.funcBase import areaCirculo, areaRetangulo
-from funcBase.funcBase import escreveValor
-from funcBase.funcBase import desLinha
-from funcBase.funcBase import desCirculoPreenchido
-from funcBase.funcBase import desRetangulo
-from funcBase.funcBase import desTrianRet
-from funcBase.funcBase import desTrianRetPreenchido
-from funcBase.funcBase import desRetanguloPreenchido
-from funcBase.funcBase import hipotenusa
+from funcBase import areaTriangulo
+from funcBase import areaCirculo, areaRetangulo
+from funcBase import escreveValor
+from funcBase import desLinha
+from funcBase import desCirculoPreenchido
+from funcBase import desTrianRetPreenchido
+from funcBase import desRetanguloPreenchido
+from funcBase import hipotenusa
 import turtle
 
 def movimentaTartaruga(tartaruga, eixoX, eixoY):

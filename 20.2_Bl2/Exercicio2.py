@@ -30,7 +30,11 @@ def contaQuantidadePalavras(lista):
     quantidadePalavras = 0
     for item in lista:
         if type(item) != list:
-            quantidadePalavras += 1
+            if item.count(' ') > 0:
+               listaSplitada = item.split(' ')
+               quantidadePalavras += contaQuantidadePalavras(listaSplitada)
+            elif len(item) > 1 and item.count(' ') == 0:
+               quantidadePalavras +=1
         else:
             quantidadePalavras += contaQuantidadePalavras(item)
     return quantidadePalavras

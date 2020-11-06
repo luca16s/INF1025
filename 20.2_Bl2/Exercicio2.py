@@ -9,8 +9,6 @@ def concatenaLista(lista):
 
     return listaConcatenada
 
-
-
 def descobrePalavraMaiorCaracter(lista):
     tamanhoMaiorPalavra = ''
     for item in lista:
@@ -24,6 +22,9 @@ def descobrePalavraMaiorCaracter(lista):
         if len(item) > len(tamanhoMaiorPalavra):
                 tamanhoMaiorPalavra = item
     return tamanhoMaiorPalavra
+
+def retornaQuantidadeCaracterMaiorPalavra(lista):
+    return len(descobrePalavraMaiorCaracter(lista))
 
 def contaQuantidadePalavras(lista):
     quantidadePalavras = 0
@@ -45,6 +46,7 @@ def transformaMaiusculo(lista):
 Lstrings=['Oi',['estamos','aprendendo',' a trabalhar'], 'com', 'listas', ['de',' strings']]
 
 print(concatenaLista(Lstrings))
+print(retornaQuantidadeCaracterMaiorPalavra(Lstrings))
 print(descobrePalavraMaiorCaracter(Lstrings))
 print(contaQuantidadePalavras(Lstrings))
 transformaMaiusculo(Lstrings)

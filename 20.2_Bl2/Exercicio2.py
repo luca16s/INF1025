@@ -9,6 +9,8 @@ def concatenaLista(lista):
 
     return listaConcatenada
 
+
+
 def descobrePalavraMaiorCaracter(lista):
     tamanhoMaiorPalavra = ''
     for item in lista:
@@ -17,8 +19,7 @@ def descobrePalavraMaiorCaracter(lista):
                 listaString = item.split(' ')
                 item = descobrePalavraMaiorCaracter(listaString)
         else:
-            if len(item) > len(tamanhoMaiorPalavra):
-                item = descobrePalavraMaiorCaracter(item)
+            item = descobrePalavraMaiorCaracter(item)
         
         if len(item) > len(tamanhoMaiorPalavra):
                 tamanhoMaiorPalavra = item

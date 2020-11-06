@@ -11,14 +11,17 @@ def concatenaLista(lista):
 
 def descobrePalavraMaiorCaracter(lista):
     tamanhoMaiorPalavra = ''
-
     for item in lista:
         if type(item) != list:
-            if len(item) > len(tamanhoMaiorPalavra):
-                tamanhoMaiorPalavra = item
+            if item.count(' ') > 0:
+                listaString = item.split(' ')
+                item = descobrePalavraMaiorCaracter(listaString)
         else:
             if len(item) > len(tamanhoMaiorPalavra):
-                tamanhoMaiorPalavra = descobrePalavraMaiorCaracter(item)
+                item = descobrePalavraMaiorCaracter(item)
+        
+        if len(item) > len(tamanhoMaiorPalavra):
+                tamanhoMaiorPalavra = item
     return tamanhoMaiorPalavra
 
 def contaQuantidadePalavras(lista):

@@ -15,11 +15,15 @@ resposta = ''
 while conjunto<quantidadeConjuntos:
     conjunto += 1
     print('Conjunto %d'%conjunto)
-    for contador in range(0, 4):
+    for contador in range(0, 7):
         valorAtual = int(input('Digite um valor inteiro: '))
-        diferencaAtual = valorAtual - valorAnterior
-        if maiorDiferenca < diferencaAtual:
+        diferencaAtual = abs(valorAtual - valorAnterior)
+        resposta = '%d %d'%(valorAnterior, valorAtual)
+
+        if diferencaAtual > 100:
+            break
+        elif maiorDiferenca < diferencaAtual:
             maiorDiferenca < diferencaAtual
-            resposta = '%d %d'%(valorAnterior, valorAtual)
+            
         valorAnterior = valorAtual
     print('Valores adjacentes com maior diferença absoluta: %s'%resposta)

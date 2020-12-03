@@ -4,16 +4,20 @@
 
 def contabilizaAlunosPorAno(listaAlunos):
     listaDisciplinasAno = []
-    quantidadePalavras = 0 # Apagar
-    for item in listaAlunos:
-        if type(item) != list:
-            if item >= 2015 and item <= 2020:
-                print()
-            else:
-                continue
+    for alunos in listaAlunos:
+        if type(alunos) == list:
+            for contador in range(1, len(alunos)):
+                ano = alunos[contador][1][0:4]
+                for (indice, item) in enumerate(listaDisciplinasAno):
+                    if ano in item:
+                        listaDisciplinasAno[indice] = [ ano, listaDisciplinasAno[indice][1] + 1 ]
+                    else:
+                        listaDisciplinasAno.append([ ano, 0 ])
+                else:
+                    listaDisciplinasAno.append([ ano, 0 ])
         else:
-            quantidadePalavras += contabilizaAlunosPorAno(item)
-    return quantidadePalavras
+            continue
+    return listaDisciplinasAno
 
 listaAlunos = [
     [111, ['FIS155', '2018_1'], ['MAT232', '2018_1'], ['INF100', '2019_1'], ['REL445', '2020_1']],

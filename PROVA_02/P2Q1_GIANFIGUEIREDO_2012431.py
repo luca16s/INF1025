@@ -15,7 +15,7 @@ resposta = ''
 while conjunto<quantidadeConjuntos:
     conjunto += 1
     print('Conjunto %d'%conjunto)
-    for contador in range(0, 7):
+    for contador in range(0, 50):
         valorAtual = int(input('Digite um valor inteiro: '))
         diferencaAtual = abs(valorAtual - valorAnterior)
         resposta = '%d %d'%(valorAnterior, valorAtual)
